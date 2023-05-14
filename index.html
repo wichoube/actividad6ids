@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actividad 6 IDS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <form id="madurez-form">
+        <label for="modulos">Cantidad de módulos agregados, modificados, eliminados:</label>
+        <input type="text" id="modulos" name="modulos">
+        <input type="button" value="Calcular Métrica de Madurez" onclick="calcularMadurez()">
+        <p id="madurez-result"></p>
+    </form>
+    
+    <form id="halstead-form">
+        <label for="n1">Número de operadores únicos:</label>
+        <input type="text" id="n1" name="n1">
+        <label for="n2">Número de operandos únicos:</label>
+        <input type="text" id="n2" name="n2">
+        <label for="N1">Total de operadores:</label>
+        <input type="text" id="N1" name="N1">
+        <label for="N2">Total de operandos:</label>
+        <input type="text" id="N2" name="N2">
+        <input type="button" value="Calcular Esfuerzo de Halstead" onclick="calcularHalstead()">
+        <p id="halstead-result"></p>
+    </form>
+    
+    <form id="html-conversion-form">
+        <label for="texto">Texto a convertir a HTML:</label>
+        <input type="text" id="texto" name="texto">
+        <input type="button" value="Convertir a HTML" onclick="convertirHTML()">
+        <p id="html-result"></p>
+    </form>
+
+    <form id="buscar-eliminar-form">
+        <div style="display: flex;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad">
+        </div>
+        <input type="button" value="Agregar a la lista" onclick="agregarALista()">
+        <p>
+        <table id="lista">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>  Edad</th>
+                </tr>
+            </thead>
+            <tbody id="lista-tbody">
+            </tbody>
+        </table>
+        <p>
+        <label for="numeros">Ingresa el multipló de edad (ejem: 2, 7):</label>
+        <input type="text" id="numeros" name="numeros">
+        <input type="button" value="Buscar y Eliminar" onclick="buscarEliminar()">        
+        <p id="buscar-eliminar-result"></p>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>
